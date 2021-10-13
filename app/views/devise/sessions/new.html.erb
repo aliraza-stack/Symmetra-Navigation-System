@@ -1,0 +1,29 @@
+<div class="text-center">
+  <main class="form-signin">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <h1>LOG IN</h1>
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+    <div class="form-floating">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control"%>
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <%= f.password_field :password, autocomplete: "current-password", class: "form-control"%>
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <% if devise_mapping.rememberable? %>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+      <% end %>
+    </div>
+    <%= f.submit "Log in", class: "w-100 btn btn-lg btn-primary" %>
+    <%= render "devise/shared/links" %>
+    <p class="mt-5 mb-3 text-muted">© 2017–2021</p>
+    <% end %>
+  </main>
+</div>
