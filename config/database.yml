@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: Symmetra_Navigation_System_development
+  database: Symmetra_Navigation_System
   adapter: postgresql
   encoding: unicode
   username: postgres
@@ -62,7 +62,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: Symmetra_Navigation_System_test
+  database: Symmetra_Navigation_System
   adapter: postgresql
   encoding: unicode
   username: postgres
