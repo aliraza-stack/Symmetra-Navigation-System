@@ -5,7 +5,7 @@
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <h1>Sign up</h1>
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-    <%= render "layouts/alert" %>
+    <%= render "shared/alert" %>
 
     <div class="form-floating">
       <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control"%>
